@@ -12,7 +12,7 @@ $(document).ajaxStart(function(){
 });
 
 function searchMember() {
-	let keyword = $('#keyword').val();
+	let keyword = $('#keyword').val(); 
 	if(keyword != ''){
 		$.ajax({
 			url: 'home/search',

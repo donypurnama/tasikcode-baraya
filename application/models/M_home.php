@@ -17,12 +17,9 @@ class M_home extends CI_model {
 		if($id){
 			$this->db->where('id',$id);
 		}
-		$this->db->order_by('id','DESC');
-<<<<<<< HEAD
-=======
+		$this->db->order_by('id','DESC'); 
 		$this->db->offset($start);
-		$this->db->limit(M_home::PERPAGE);
->>>>>>> e99cb7ff4dd62878afaa525f815600c3a2fbf5b1
+		$this->db->limit(M_home::PERPAGE); 
 		$query = $this->db->get();
 		return $query->result();
 	}

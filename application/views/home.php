@@ -46,64 +46,19 @@
                 </button>
             </div>
         </div>
-    </header>
-
-<<<<<<< HEAD
-<main role="main"> 
-    <div class="py-5 bg-light">
-        <div class="container"> 
-            <div class="row"> 
-                <div class="col-sm-12">
-                	<div class="row justify-content-between">
-                        <div class="col-md-12 col-lg-5 mb-2"> 
-                              <a href="<?=$gform?>" class="btn btn-block btn-outline-secondary" target="_blank">
-                                  <i class="fa fa-user-plus"></i> Saya ingin memperkenalkan diri
-                              </a> 
-                        </div>
-                		<div class="cold-md-12 col-lg-4">
-                			<div class="input-group mb-3">
-							  <input type="text" class="form-control" placeholder="Siapa yang anda cari..." id="keyword">
-							  <div class="input-group-append">
-							    <button class="btn btn-outline-secondary" id="btn_search">Cari</button>
-							  </div>
-							</div>
-                		</div>
-                	</div> 
-                    <hr>
-                </div>
-                <div class="intro"></div>
-            	<?php foreach ($family as $d){ ?>
-                <div class="col-lg-3 col-md-6 col-sm-12 members">
-                    <div class="card mb-4 shadow-sm"> 
-                        <img 
-                            class='bd-placeholder-img card-img-top' 
-                            src="<?=$d['image']; ?>" 
-                            onerror="this.src='asset/img/github-logo.png';
-                        "/>
-                        <div class="card-body"> 
-                            <p class="card-text">
-                            	<center>
-                            		<b><?=$d['name'];?></b><br>
-                            		<small class='text-black-50'><?=$d['title'];?></small>
-                            	</center>
-                            </p>
-                            <div class="d-flex justify-content-between align-items-center"> 
-                                    <button class="btn btn-sm btn-outline-secondary btn-block btn-detail" data-id="<?=$d['id']?>">
-                                    	Kenali lebih dekat
-                                	</button>  
-=======
+    </header> 
     <main role="main">
         <div class="py-5 bg-light">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="row justify-content-between">
-                            <div class="col-md-6 col-lg-4 mb-2">
+                            <div class="col-md-12 col-lg-6 mb-2">
                                 <a href="<?= $gform ?>" class="btn btn-block btn-outline-secondary" target="_blank">
                                     <i class="fa fa-user-plus"></i> Saya ingin memperkenalkan diri
                                 </a>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-12 col-lg-4">
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" placeholder="Siapa yang anda cari..." id="keyword">
                                     <div class="input-group-append">
@@ -131,13 +86,11 @@
                                             Kenali lebih dekat
                                         </button>
                                     </div>
-                                </div>
->>>>>>> e99cb7ff4dd62878afaa525f815600c3a2fbf5b1
+                                </div> 
                             </div>
                         </div>
                     <?php endforeach; ?>
-                </div>
-
+                </div> 
             </div>
         </div>
 
