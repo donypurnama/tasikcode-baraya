@@ -102,7 +102,7 @@ hasTouchTheLimit = false;
 
 $(document).scroll(function(){
 	var _this = $(this),
-	delimiterHeight = $(document).height() - 10,
+	delimiterHeight = $(document).height() - 100,
 	pixelElapse = $(window).height() + _this.scrollTop();
 
 	if(pixelElapse > delimiterHeight){
