@@ -1,16 +1,3 @@
-$(document).ajaxStart(function(){
-	$('.spinner').remove();
-	$('.not-found').remove();
-	$('.content').append(`<div class="spinner">
-	<div class="bounce1"></div>
-	<div class="bounce2"></div>
-	<div class="bounce3"></div>
-	</div>`);
-	setTimeout(() => {
-		$('.spinner').remove();
-	},600);
-});
-
 function searchMember() {
 	let keyword = $('#keyword').val(); 
 	if(keyword != ''){
@@ -19,7 +6,19 @@ function searchMember() {
 			type: 'post',
 			data: {keyword : keyword},
 			dataType: 'json',
-			success: function(result) {
+			beforeSend: () => {
+				$('.spinner').remove();
+				$('.not-found').remove();
+				$('.content').append(`<div class="spinner">
+				<div class="bounce1"></div>
+				<div class="bounce2"></div>
+				<div class="bounce3"></div>
+				</div>`);
+				setTimeout(() => {
+					$('.spinner').remove();
+				},600);	
+			},
+			success: (result) => {
 				$('.members').remove();
 				if(result.length < 1) {
 					$('.members').remove();
